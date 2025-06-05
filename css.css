@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f6f9fe; /* Keep a light background */
+    color: #3753a2; /* SoftNet Blue for general body text for better contrast */
+}
+
+.card {
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.metric-card {
+    color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.metric-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.metric-icon-wrapper {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.75rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.metric-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* SoftNet Technologies Brand Gradients */
+.bg-blue-gradient {
+    background: linear-gradient(to right bottom, #3753a2, #4b66b8); /* SoftNet Blue gradient */
+}
+
+.bg-green-gradient {
+    background: linear-gradient(to right bottom, #1b9349, #2eaf60); /* SoftNet Green gradient */
+}
+
+/* Secondary gradients for metrics, using lighter brand tones */
+.bg-yellow-gradient {
+    background: linear-gradient(to right bottom, #2eaf60, #42c276); /* Lighter SoftNet Green gradient */
+}
+
+.bg-red-gradient {
+    background: linear-gradient(to right bottom, #4b66b8, #607ed0); /* Lighter SoftNet Blue gradient */
+}
+
+.alert-custom {
+    border-left: 4px solid;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.alert-critical {
+    background-color: #fef2f2; /* Light red background */
+    border-color: #ef4444; /* Red border */
+    color: #b91c1c; /* Dark red text */
+}
+
+.alert-warning {
+    background-color: #fff7e6; /* Light orange background */
+    border-color: #ffcc80; /* Soft orange border */
+    color: #d48806; /* Darker orange text */
+}
+
+.alert-info {
+    background-color: #e6eff7; /* Light blue background */
+    border-color: #3753a2; /* SoftNet Blue border */
+    color: #2c4281; /* Darker SoftNet Blue text */
+}
+
+.chart-container {
+    height: 300px;
+    width: 100%;
+}
+
+.apply-filters-btn {
+    background-color: #3753a2; /* SoftNet Blue button */
+    border-color: #3753a2;
+    color: white;
+}
+
+.apply-filters-btn:hover {
+    background-color: #2c4281; /* Darker SoftNet Blue on hover */
+    border-color: #2c4281;
+}
+
+header.header-flex h1 {
+    color: #ffffff !important; /* Header text white */
+    font-weight: 700;
+    text-align: left;
+    padding-left: 220px; 
+}
+
+header.header-flex {
+    background: linear-gradient(to right, #1b9349, #3753a2); /* Green to Blue gradient for header */
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+header.header-flex .fa-bell {
+    color: #ffffff; /* Notification icon color for better visibility on gradient */
+}
+
+@media (max-width: 767.98px) {
+    header.header-flex h1 {
+        padding-left: 80px; /* Adjusted for smaller screens, increased */
+        font-size: 1.5rem;
+    }
+    .header-logo {
+        height: 40px;
+    }
+    .header-flex {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .header-flex h1 {
+        margin-bottom: 1rem;
+    }
+    .filter-section {
+        flex-direction: column;
+        align-items: stretch !important;
+    }
+    .filter-section > div {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .filter-section button {
+        width: 100%;
+    }
+}
+
+.header-logo {
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    height: 60px;
+    width: auto;
+    z-index: 100;
+}
+
+@media (max-width: 767.98px) {
+    .header-logo {
+        height: 40px;
+        left: 10px;
+        top: 10px;
+    }
+}
+
+/* New styles for Chart.js legend items to mimic buttons */
+.chartjs-legend li {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* A subtle drop shadow */
+    border-radius: 0.25rem; /* Slightly rounded corners */
+    padding: 0.25rem 0.5rem; /* Some padding to make them look like buttons */
+    margin: 0.25rem; /* Space between items */
+    display: inline-flex; /* To allow padding and shadow */
+    align-items: center;
+    cursor: pointer !important; /* Indicate it's clickable, even if not functional yet */
+    transition: all 0.2s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.8); /* Add a background for better shadow visibility */
+    color: #3753a2; /* SoftNet Blue text */
+    font-weight: 500; /* Make text slightly bolder */
+}
+
+.chartjs-legend li:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.chartjs-legend li span {
+    margin-right: 0.5rem;
+    border-radius: 0.125rem;
+    cursor: progress !important;
+}
